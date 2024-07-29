@@ -1,7 +1,6 @@
 import { NavbarContextProvider } from './NavbarContext';
 import { NabvarOverlay } from './NavbarOverlay';
-import { ShoppingMenuBar } from './ShoppingMenuBar';
-import { HelpMenuBar } from './HelpMenuBar';
+import { MenuBar } from './MenuBar';
 
 import classes from './Navbar.module.css';
 
@@ -16,10 +15,8 @@ export function Navbar() {
             <h1>BRAND NAME</h1>
           </div>
           <div className={classes.navbarMenuContainer}>
-            <ShoppingMenuBar />
-            <HelpMenuBar />
+            <MenuBar />
           </div>
-          {/* <NavbarMenus /> */}
         </nav>
       </header>
     </NavbarContextProvider>
