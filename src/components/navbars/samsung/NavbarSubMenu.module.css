@@ -1,0 +1,28 @@
+.subMenu {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.subMenuTitle {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.subMenuList {
+    padding-right: 32px;
+    padding-bottom: 32px;
+}
+
+.subMenuListItem {
+    padding-bottom: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: text-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.subMenuListItem:hover {
+    text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}

@@ -1,0 +1,30 @@
+.menuItem {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuItem[data-index="0"],
+.menuItem[data-index="1"] {
+    /* position: relative; */
+}
+
+.menuItem .itemWrapper,
+.menuItem .itemWrapper button {
+    cursor: pointer;
+}
+
+.menuItem button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+.menuItem.active .itemWrapper button {
+    background-color: #000;
+    color: #fff;
+    border-radius: 25px;
+}

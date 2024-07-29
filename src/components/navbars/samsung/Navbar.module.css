@@ -1,0 +1,27 @@
+.navbarContainer {
+    position: relative;
+    height: 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brandName {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navbarMenuContainer {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 0 auto;
+}
