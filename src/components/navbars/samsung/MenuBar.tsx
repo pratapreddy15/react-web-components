@@ -32,12 +32,30 @@ function SubMenuContainer({ parentMenuItem, isOpen, alignment }: { parentMenuIte
 export function MenuBar() {
   const {
     menus: { shopping, help },
+    showMobileMenu,
+    setShowMobileMenu,
     selectedMenuId,
   } = useContext(NavbarContext);
 
   return (
-    <>
-      <ul className={classes.menuBar}>
+    <div className={`${classes.menuBarWrapper} ${showMobileMenu ? classes.open : ''}`}>
+      <div className={classes.searchWrapper}>
+        <button className={classes.searchButton}>
+          <i className="bi bi-search"></i>
+        </button>
+        <button className={classes.closeMobileMenuButton} onClick={() => setShowMobileMenu(false)}>
+          <i className="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div className={classes.accountWrapper}>
+        <a href="#" className={classes.loginLink}>
+          Log-In/Sign-Up
+        </a>
+        <a href="#" className={classes.accountBenefitLink}>
+          Why Create a Samsung Account?<i className="bi bi-chevron-right"></i>
+        </a>
+      </div>
+      <ul className={`${classes.menuBar} ${classes.left}`}>
         {shopping.map((menuItem, menuItemIndex) => (
           <NavbarMenuItem id={menuItem.id} index={menuItemIndex} text={menuItem.text} hasSubMenu={menuItem.subMenus.length > 0}>
             {menuItem.subMenus.length > 0 && (
@@ -50,7 +68,7 @@ export function MenuBar() {
           </NavbarMenuItem>
         ))}
       </ul>
-      <ul className={classes.menuBar}>
+      <ul className={`${classes.menuBar} ${classes.right}`}>
         {help.map((menuItem, menuItemIndex) => (
           <NavbarMenuItem id={menuItem.id} index={menuItemIndex} text={menuItem.text} hasSubMenu={menuItem.subMenus.length > 0}>
             {menuItem.subMenus.length > 0 && (
@@ -63,6 +81,6 @@ export function MenuBar() {
           </NavbarMenuItem>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

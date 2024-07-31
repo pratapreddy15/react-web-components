@@ -5,11 +5,6 @@
     align-items: center;
 }
 
-.menuItem[data-index="0"],
-.menuItem[data-index="1"] {
-    /* position: relative; */
-}
-
 .menuItem .itemWrapper,
 .menuItem .itemWrapper button {
     cursor: pointer;
@@ -19,12 +14,40 @@
     border: none;
     outline: none;
     background-color: transparent;
-    font-size: 16px;
-    padding: 4px 8px;
+    font-size: 0.9vw;
+    padding: 0.313vw 0.625vw;
 }
 
 .menuItem.active .itemWrapper button {
     background-color: #000;
     color: #fff;
     border-radius: 25px;
+}
+
+@media (max-width: 1440px) {
+    .menuItem button {
+        font-size: 1vw;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1240px) {
+    .menuItem {
+        margin-bottom: 16px;
+    }
+
+    .menuItem button {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .menuItem.active .itemWrapper button {
+        background-color: transparent;
+        color: #000;
+        border-radius: none;
+    }
+
+    .menuItem button:hover {
+        font-weight: bold;
+    }
 }

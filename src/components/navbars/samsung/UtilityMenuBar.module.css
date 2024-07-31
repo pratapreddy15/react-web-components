@@ -1,0 +1,19 @@
+.menuBar {
+    display: flex;
+    margin-left: 4.44vw;
+}
+
+.utility {}
+
+.menuItem:not(:last-child) {
+    margin-right: 1.333vw;
+}
+
+.menuItem i {
+    font-size: 1.4vw;
+    cursor: pointer;
+}
+
+.menuItem:last-child i {
+    font-size: 1.6vw;
+}

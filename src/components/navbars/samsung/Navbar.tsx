@@ -1,8 +1,10 @@
 import { NavbarContextProvider } from './NavbarContext';
 import { NabvarOverlay } from './NavbarOverlay';
+import { UtilityMenuBar } from './UtilityMenuBar';
 import { MenuBar } from './MenuBar';
 
 import classes from './Navbar.module.css';
+import { MenuToggleButton } from './MenuToggleButton';
 
 export function Navbar() {
   return (
@@ -16,6 +18,8 @@ export function Navbar() {
           </div>
           <div className={classes.navbarMenuContainer}>
             <MenuBar />
+            <UtilityMenuBar />
+            <MenuToggleButton />
           </div>
         </nav>
       </header>

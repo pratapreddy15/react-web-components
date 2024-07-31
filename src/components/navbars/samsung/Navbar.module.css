@@ -9,7 +9,7 @@
 .navbar {
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
@@ -21,7 +21,17 @@
 .navbarMenuContainer {
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex: 1 0 auto;
+}
+
+@media (max-width: 1240px) {
+    .navbar {
+        justify-content: space-between;
+        margin: 0 4.444vw;
+    }
+
+    .navbarMenuContainer {
+        justify-content: space-between;
+    }
 }

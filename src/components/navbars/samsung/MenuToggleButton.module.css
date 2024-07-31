@@ -1,0 +1,18 @@
+.toggleMenuWrapper {
+    display: none;
+    margin-left: 1.333vw;
+}
+
+.toggleMenuButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.95vw;
+    cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+    .toggleMenuWrapper {
+        display: block;
+    }
+}

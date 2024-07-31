@@ -6,23 +6,33 @@
 
 .subMenuTitle {
     margin-bottom: 12px;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 0.85vw;
 }
 
 .subMenuList {
-    padding-right: 32px;
+    padding-right: 1.5vw;
     padding-bottom: 32px;
 }
 
 .subMenuListItem {
     padding-bottom: 16px;
     line-height: 16px;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 0.95vw;
     transition: text-shadow 0.2s ease;
     cursor: pointer;
 }
 
 .subMenuListItem:hover {
     text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+
+@media (max-width: 1440px) {
+    .subMenuTitle {
+        font-size: 1.1vw;
+    }
+
+    .subMenuListItem {
+        font-size: 1.1vw;
+    }
 }

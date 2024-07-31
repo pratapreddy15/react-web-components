@@ -147,7 +147,7 @@ export const shoppingMenus: Menu[] = [
         ]
     },
     {
-        id: 'ai',
+        id: 'ai-menu',
         text: 'AI',
         subMenus: [
             [

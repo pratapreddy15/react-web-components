@@ -11,7 +11,7 @@ interface NavbarMenuItemProps {
 }
 
 export function NavbarMenuItem(props: NavbarMenuItemProps) {
-  const { selectedMenuId, setSelectedMenuId, setShowOeverlay } = useContext(NavbarContext);
+  const { selectedMenuId, setSelectedMenuId, showMobileMenu, setShowOeverlay } = useContext(NavbarContext);
 
   const { index, id, text, hasSubMenu, children } = props;
   const isExpanded = selectedMenuId === id;
@@ -26,14 +26,25 @@ export function NavbarMenuItem(props: NavbarMenuItemProps) {
       <div
         className={classes.itemWrapper}
         onMouseEnter={() => {
-          setSelectedMenuId(id);
-          setShowOeverlay(hasSubMenu);
+          if (!showMobileMenu) {
+            setSelectedMenuId(id);
+            setShowOeverlay(hasSubMenu);
+          }
         }}
         onMouseLeave={() => {
-          !hasSubMenu && setSelectedMenuId('');
+          !showMobileMenu && !hasSubMenu && setSelectedMenuId('');
         }}
       >
-        <button id={id}>{text}</button>
+        <button
+          id={id}
+          onClick={() => {
+            if (showMobileMenu) {
+              setSelectedMenuId(id);
+            }
+          }}
+        >
+          {text}
+        </button>
       </div>
       {children}
     </li>

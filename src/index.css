@@ -1,3 +1,9 @@
+:root {
+  --zindex-overlay: 1;
+  --zindex-navbar: 2;
+  --zindex-submenu: 2;
+}
+
 *,
 *::after,
 *::before {
@@ -8,8 +14,8 @@
 
 html,
 body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 
